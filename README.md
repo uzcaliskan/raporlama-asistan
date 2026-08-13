@@ -181,6 +181,5 @@ Bu test, projenin **ana senaryosunun** (günlük saha raporlarının otomatik an
 
 - `process_excel_and_generate_report`, her kuyu satırı için **ayrı bir model çağrısı** yapar (tek dev prompt yerine) — bu, tutarlılığı artırır ama Excel'deki kuyu sayısı arttıkça işlem süresi uzar.
 - Rapor sınıflandırma güvenilirliği tam değil: Model, bazı kuyuları "Yaklaşan Operasyon"/"Öncelikli" kurallarına göre her zaman doğru sınıflandırmıyor — bazı satırlarda yanlış kategori seçebiliyor ya da açıklama metnini rapordaki gerçek durumla tam örtüşmeyecek şekilde özetleyebiliyor. Bu, LLM tabanlı sınıflandırmanın (kural motoruna kıyasla) doğasında olan bir tutarsızlık riski — üretilen PDF'in kritik kararlar için kullanılmadan önce elle gözden geçirilmesi öneriliyor.
-- 
 - `execute_python_code`, modelin ürettiği kodu **doğrudan** çalıştırır — üretim ortamında kullanılmadan önce ek bir güvenlik/sandbox katmanı (örn. kaynak sınırlama, ağ erişimi kısıtlama) eklenmesi önerilir.
 - E-posta gönderimi şu an sabit kodlanmış bir Gmail hesabına bağlı; kurumsal SMTP'ye geçiş `send_gmail` fonksiyonunun güncellenmesini gerektirir.
